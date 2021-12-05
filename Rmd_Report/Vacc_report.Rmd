@@ -1,0 +1,46 @@
+---
+title: "Vaccination Report"
+author: "Tingyang Hu"
+date: "11/8/2021"
+output: html_document
+---
+
+
+```{r,include=FALSE}
+here::i_am('Rmd_Report/Vacc_report.Rmd')
+# run the R code from the root directory
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+The dataset contains the Covid-19 vaccination data across countries, territories and areas provided by WHO to the data of 08/31/2021. The variables include countries, cumulative total vaccine doses administered, cumulative number of persons vaccinated with at least one dose, vaccine types used, etc. Exploratory analysis including characterizing summary statistics and data visualization will be performed on the data. 
+
+```{r, read-data, echo = FALSE}
+vaccine_processed <- read.csv(here::here("data","vaccine_output.csv"))
+```
+
+
+## Table of the overall vaccination over the world
+```{r load package, include=FALSE}
+library(table1)
+```
+
+
+```{r table,echo=FALSE}
+# create the table of characteristics
+table1( ~ TOTAL_VACCINATIONS_PER100 + PERSONS_FULLY_VACCINATED_PER100, data = vaccine_processed)
+```
+
+## Map plot of vaccination over the world
+
+The figure for vaccination across different countries are showed, in which the shade of the color indicates number of vaccinations.
+```{r figure,echo=FALSE,fig.cap="Figure 1:Vaccinated Population Distribution"}
+knitr::include_graphics(here::here("figure","figure1.png"))
+```
+
