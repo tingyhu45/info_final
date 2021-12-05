@@ -10,7 +10,8 @@ To analyze the data,you would need `Dokcer` software and `R` version later than 
 
 
 **Docker Image **
-All the required packages  have been packed within my Docker image.
+
+All the required packages have been packed within my Docker image.
 
 ```
 ## Pull the image into local.
@@ -25,7 +26,7 @@ Execute the analysis
 
 ```
 # Clone the project to local
-git clone https://github.com/tingyhu45/info550_final.git
+git clone https://github.com/tingyhu45/info_final.git
 ```
 
 **2. Mount the output to local directory**
@@ -39,7 +40,7 @@ mkdir {your_pwd}/docker_output
 
 # mount the output directory to local and get access to the image
 cd {your_pwd}/info550_final
-docker run -v ~/docker_output:/project/output -it tingyhu/my_project
+docker run -v {your_pwd}/docker_output:/project/output -it tingyhu/my_project
 ```
 
 **3. Produce the result**
