@@ -12,9 +12,9 @@ To analyze the data,you would need `Dokcer` software and `R` version later than 
 **Docker Image**
 
 All the required R packages have been packed within my Docker image.
-
+Your need to pull the built image from DockerHub.
 ```
-## Pull the image to local
+## Pull the image from Dockerhub to local
 docker pull tingyhu/my_project
 ```
 
