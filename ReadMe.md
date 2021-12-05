@@ -9,12 +9,12 @@ For my project, I will analyze the Covid-19 vaccination data across different co
 To analyze the data,you would need `Dokcer` software and `R` version later than 4.0  
 
 
-**Docker Image **
+**Docker Image**
 
 All the required packages have been packed within my Docker image.
 
 ```
-## Pull the image into local.
+## Pull the image to local
 docker pull tingyhu/my_project
 ```
 
@@ -25,7 +25,7 @@ Execute the analysis
 **1. Clone the project to local**
 
 ```
-# Clone the project to local
+# clone the project to local
 git clone https://github.com/tingyhu45/info_final.git
 ```
 
